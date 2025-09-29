@@ -1,9 +1,122 @@
-My Rotten Potatoes - Projeto de Engenharia de SoftwareEste projeto foi desenvolvido como parte da disciplina de Engenharia de Software da Universidade de Brasília (UnB).Aluno: Célio Júnio de Freitas EduardoMatrícula: 211010350📖 Sobre o ProjetoMy Rotten Potatoes é uma aplicação web simples construída com Ruby on Rails, baseada nas orientações do livro Engineering Software as a Service. O objetivo principal é criar um catálogo de filmes onde o usuário pode realizar operações básicas de cadastro (CRUD - Create, Read, Update, Delete) e também ordenar a lista de filmes por título e data de lançamento.Este projeto demonstra a aplicação prática dos conceitos do padrão de arquitetura MVC (Model-View-Controller) e do Active Record para a persistência de dados.✨ Funcionalidades ImplementadasListagem de todos os filmes cadastrados.Visualização de detalhes de um filme específico.Adição de novos filmes ao catálogo.Edição de informações de filmes existentes.Exclusão de filmes do catálogo.Ordenação da lista de filmes por título (ordem alfabética).Ordenação da lista de filmes por data de lançamento.Destaque visual na coluna que está sendo utilizada para a ordenação.🚀 Como Rodar o Projeto LocalmentePara executar esta aplicação em sua máquina, siga os passos abaixo.✅ Pré-requisitosAntes de começar, garanta que você tenha os seguintes softwares instalados:Ruby (versão 3.0 ou superior)Rails (versão 7.0 ou superior)Bundler (gerenciador de dependências do Ruby)Git (para clonar o repositório)⚙️ Passos para InstalaçãoClone o Repositório:Abra seu terminal e clone este projeto usando o Git.git clone [https://github.com/celio-eduardo/myrottenpotatoes.git](https://github.com/celio-eduardo/myrottenpotatoes.git)
-Acesse a Pasta do Projeto:cd myrottenpotatoes
-Instale as Dependências:Execute o Bundler para instalar todas as "gems" (bibliotecas) necessárias.bundle install
-Crie e Configure o Banco de Dados:Execute os seguintes comandos do Rails para criar o banco de dados, aplicar as migrations (que criam a tabela de filmes) e popular a tabela com dados iniciais.rails db:create
+My Rotten Potatoes - Projeto de Engenharia de Software
+Este projeto foi desenvolvido como parte da disciplina de Engenharia de Software da Universidade de Brasília (UnB).
+
+Aluno: Célio Júnio de Freitas Eduardo
+
+Matrícula: 211010350
+
+📖 Sobre o Projeto
+My Rotten Potatoes é uma aplicação web simples construída com Ruby on Rails, baseada nas orientações do livro Engineering Software as a Service. O objetivo principal é criar um catálogo de filmes onde o usuário pode realizar operações básicas de cadastro (CRUD - Create, Read, Update, Delete) e também ordenar a lista de filmes por título e data de lançamento.
+
+Este projeto demonstra a aplicação prática dos conceitos do padrão de arquitetura MVC (Model-View-Controller) e do Active Record para a persistência de dados.
+
+✨ Funcionalidades Implementadas
+Listagem de todos os filmes cadastrados.
+
+Visualização de detalhes de um filme específico.
+
+Adição de novos filmes ao catálogo.
+
+Edição de informações de filmes existentes.
+
+Exclusão de filmes do catálogo.
+
+Ordenação da lista de filmes por título (ordem alfabética).
+
+Ordenação da lista de filmes por data de lançamento.
+
+Destaque visual na coluna que está sendo utilizada para a ordenação.
+
+🚀 Como Rodar o Projeto Localmente
+Para executar esta aplicação em sua máquina, siga os passos abaixo.
+
+✅ Pré-requisitos
+Antes de começar, garanta que você tenha os seguintes softwares instalados:
+
+Ruby (versão 3.0 ou superior)
+
+Rails (versão 7.0 ou superior)
+
+Bundler (gerenciador de dependências do Ruby)
+
+Git (para clonar o repositório)
+
+⚙️ Passos para Instalação
+Clone o Repositório:
+Abra seu terminal e clone este projeto usando o Git.
+
+git clone [https://github.com/celio-eduardo/myrottenpotatoes.git](https://github.com/celio-eduardo/myrottenpotatoes.git)
+
+Acesse a Pasta do Projeto:
+
+cd myrottenpotatoes
+
+Instale as Dependências:
+Execute o Bundler para instalar todas as "gems" (bibliotecas) necessárias.
+
+bundle install
+
+Crie e Configure o Banco de Dados:
+Execute os seguintes comandos do Rails para criar o banco de dados, aplicar as migrations (que criam a tabela de filmes) e popular a tabela com dados iniciais.
+
+rails db:create
 rails db:migrate
 rails db:seed
-▶️ Executando a AplicaçãoCom tudo configurado, inicie o servidor local do Rails:bin/dev
-ourails server
-Agora, abra seu navegador e acesse a URL: http://localhost:3000/movies🔍 Verificando o FuncionamentoPara garantir que todas as funcionalidades do projeto estão operando corretamente, siga este checklist de verificação:Acessar a Página Principal:Vá para http://localhost:3000/movies.Resultado esperado: A página deve carregar, exibindo uma tabela com a lista inicial de filmes.Verificar a Ordenação por Título:Clique no cabeçalho da coluna "Movie Title".Resultado esperado: A lista de filmes deve ser recarregada em ordem alfabética pelo título. O cabeçalho "Movie Title" deve aparecer com um fundo amarelo de destaque.Verificar a Ordenação por Data de Lançamento:Clique no cabeçalho da coluna "Release Date".Resultado esperado: A lista deve ser recarregada em ordem de data (do mais antigo para o mais novo). O cabeçalho "Release Date" deve ficar destacado em amarelo.Adicionar um Novo Filme:Clique no botão "Add new movie".Preencha o formulário e clique em "Save Changes".Resultado esperado: Você será redirecionado para a lista principal, e uma mensagem de sucesso ("...was successfully created.") deve aparecer no topo. O novo filme deve estar na lista.Verificar Detalhes e Edição:Na lista, clique em um link da coluna "More Info".Na página de detalhes, clique no botão "Edit".Altere alguma informação e clique em "Update Movie".Resultado esperado: A página de detalhes será exibida com a informação atualizada e uma mensagem de sucesso.Excluir um Filme:Na página de detalhes de um filme, clique no botão "Delete".Uma caixa de confirmação aparecerá. Confirme a exclusão.Resultado esperado: Você será redirecionado para a lista principal, o filme não estará mais lá e uma mensagem de sucesso ("...deleted.") será exibida.
+
+▶️ Executando a Aplicação
+Com tudo configurado, inicie o servidor local do Rails:
+
+bin/dev
+
+ou
+
+rails server
+
+Agora, abra seu navegador e acesse a URL: http://localhost:3000/movies
+
+🔍 Verificando o Funcionamento
+Para garantir que todas as funcionalidades do projeto estão operando corretamente, siga este checklist de verificação:
+
+Acessar a Página Principal:
+
+Vá para http://localhost:3000/movies.
+
+Resultado esperado: A página deve carregar, exibindo uma tabela com a lista inicial de filmes.
+
+Verificar a Ordenação por Título:
+
+Clique no cabeçalho da coluna "Movie Title".
+
+Resultado esperado: A lista de filmes deve ser recarregada em ordem alfabética pelo título. O cabeçalho "Movie Title" deve aparecer com um fundo amarelo de destaque.
+
+Verificar a Ordenação por Data de Lançamento:
+
+Clique no cabeçalho da coluna "Release Date".
+
+Resultado esperado: A lista deve ser recarregada em ordem de data (do mais antigo para o mais novo). O cabeçalho "Release Date" deve ficar destacado em amarelo.
+
+Adicionar um Novo Filme:
+
+Clique no botão "Add new movie".
+
+Preencha o formulário e clique em "Save Changes".
+
+Resultado esperado: Você será redirecionado para a lista principal, e uma mensagem de sucesso ("...was successfully created.") deve aparecer no topo. O novo filme deve estar na lista.
+
+Verificar Detalhes e Edição:
+
+Na lista, clique em um link da coluna "More Info".
+
+Na página de detalhes, clique no botão "Edit".
+
+Altere alguma informação e clique em "Update Movie".
+
+Resultado esperado: A página de detalhes será exibida com a informação atualizada e uma mensagem de sucesso.
+
+Excluir um Filme:
+
+Na página de detalhes de um filme, clique no botão "Delete".
+
+Uma caixa de confirmação aparecerá. Confirme a exclusão.
+
+Resultado esperado: Você será redirecionado para a lista principal, o filme não estará mais lá e uma mensagem de sucesso ("...deleted.") será exibida.
