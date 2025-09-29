@@ -2,7 +2,16 @@
 class MoviesController < ApplicationController
 
   def index
-    @movies = Movie.all
+    # Armazena o parâmetro de ordenação para usar na view
+    @sort_column = params[:sort_by]
+
+    if @sort_column
+      # Se um parâmetro de ordenação for fornecido, usa o método 'order'
+      @movies = Movie.order(@sort_column)
+    else
+      # Caso contrário, apenas busca todos os filmes na ordem padrão
+      @movies = Movie.all
+    end
   end
 
   def show
@@ -47,3 +56,4 @@ class MoviesController < ApplicationController
   end
 
 end
+
