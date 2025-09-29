@@ -1,22 +1,16 @@
-# Este arquivo define as configurações de conexão para o banco de dados.
-# YAML é sensível à indentação. Use espaços, não tabs.
-
 default: &default
   adapter: sqlite3
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
-# Configuração para o ambiente de desenvolvimento (o que você está usando)
 development:
   <<: *default
   database: db/development.sqlite3
 
-# Configuração para o ambiente de teste
 test:
   <<: *default
   database: db/test.sqlite3
 
-# Configuração para o ambiente de produção (quando você coloca o site no ar)
 production:
   <<: *default
   database: db/production.sqlite3
