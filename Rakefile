@@ -1,9 +1,6 @@
-# Este arquivo é responsável por carregar as tarefas do Rails que você
-# executa na linha de comando (ex: rails db:migrate, rails routes).
-# Você raramente precisará editar este arquivo.
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
-# Carrega a configuração principal da sua aplicação.
 require_relative "config/application"
 
-# Carrega todas as tarefas disponíveis do Rails.
 Rails.application.load_tasks
